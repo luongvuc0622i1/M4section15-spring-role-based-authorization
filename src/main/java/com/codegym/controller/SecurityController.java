@@ -40,4 +40,10 @@ public class SecurityController {
         model.addAttribute("user", getPrincipal());
         return "/access-denied";
     }
+
+    @GetMapping( "/dba")
+    public String dbaPage(ModelMap model) {
+        model.addAttribute("user", getPrincipal());
+        return "/dba";
+    }
 }
