@@ -34,4 +34,10 @@ public class SecurityController {
         modelMap.addAttribute("user", getPrincipal());
         return "/admin";
     }
+
+    @GetMapping("/accessDenied")
+    public String accessDeniedPage(ModelMap model) {
+        model.addAttribute("user", getPrincipal());
+        return "/access-denied";
+    }
 }
